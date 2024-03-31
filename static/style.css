@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d2d2d2;
+}
+.navbar{
+background-color: black;
+color: white;
+height: 10vh;
+/* min-width: 100vw; */
+
+}
+.logo img{
+    margin-top: 1vh;
+    height: 8vh;
+}
+
+.options{
+    position: absolute;
+    right: 0;
+    top: 15vh;
+   min-height: 60vh;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* flex-direction: column; */
+}
+.swiper-wrapper{
+    display: flex;
+align-items: center;
+margin: auto; 
+}
+
+.swiper-wrapper :first-child{
+    margin-left: 2vw;
+
+}
+.swiper-slide {
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    margin-right: 2vw;
+    border: 2px solid black;
+    border-radius: 1.5vh;
+    display: flex;
+    flex-direction: column;
+ align-items: center;
+height: 54vh;
+overflow: hidden;
+background-color: #fff;
+}
+.swiper-slide:hover{
+    cursor: pointer;
+    
+
+}
+.swiper-slide:hover {
+    box-shadow: 0 0 15px black;
+}
+
+.swiper-slide img{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 6vh;
+    margin: 2vh 1.8vw;
+}
+.swiper-slide p{
+    margin:1vw 3vh;    
+    color: rgb(81, 81, 81);
+}
+.summarize{
+    position: relative;
+    width: 20vw;
+    height: 5vh;
+    left: 40vw;
+    top: 75vh;
+}
+.summarize button{
+    background-color: rgb(60, 109, 244);
+    width: 100%;
+    height: 100%;
+}
+.summarize button:hover{
+    background-color: rgb(37, 154, 53);
+    cursor: pointer;
+}
+
+.output{
+    position: relative;
+    width: 90vw;
+    border: 2px solid black;
+    border-radius: 2vh;
+    min-height: 30vh;
+    margin: auto;
+    top: 80vh;
+    padding: 4vh 2vw;
+    font-size: 1.4rem;
+    background-color: #fff;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}

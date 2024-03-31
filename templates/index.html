@@ -3,14 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SummaRise</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
 </head>
 <body>
-    {% for s in all_s %}
+    <div class="navbar">
+    <div class="logo">
+        <img src="{{url_for('static', filename='Firefly_20240327011332-removebg.png')}}" alt="">
+    </div>
+    </div>
+    <!-- <div class="input">
+        <form class="inp">
+            <input type="text" class="btn email" placeholder=" G-mail">
+            <input type="password" class="btn password" placeholder=" Password">
+            <i class="far fa-eye-slash" id="togglePassword"></i>
+        </form>
+        <button class="btn verify">Verify</button> -->
+<div class="options">
+        <div class="swiper-wrapper">
 
-    {{ s | safe }}
-    <hr/>
+            {% for s in all_s: %}
 
-    {% endfor %}
+            <div class="swiper-slide">
+                <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="Profile Picture">
+                <h3> {{s['From']}} </h3>
+                <h2> {{s['Subject']}} </h2>
+                <p> {{s['summary']}} </p>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+    </div>
+    <div class="summarize">
+    <button>
+        SUMMARIZE
+    </button>
+    </div>
+</div>
+</div>
+<div class="output">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et asperiores, id magnam voluptate optio molestiae quos illo libero repellendus tenetur rem praesentium sequi! Deserunt quo nam commodi laudantium molestiae officia veniam, voluptate architecto eos quis autem culpa neque dicta, nemo eaque qui, illum quos tenetur ipsum vitae. Ad culpa nihil expedita quod autem! Voluptatum ipsam eum architecto sunt, ipsum error quisquam soluta fuga atque vitae, dignissimos dicta, adipisci aliquid dolores doloribus consequatur voluptates sint corrupti magni hic natus? Quia qui eveniet odio culpa magni laborum labore quidem blanditiis. Id beatae officiis dicta, odio excepturi recusandae nobis totam natus rerum?
+</div>
+<script src="{{url_for('static', filename='script.js')}}"></script>
 </body>
 </html>

@@ -51,6 +51,8 @@ def get_mails(n_mails):
             # print(msg, '\n\n\n')  
             email_data = msg['payload']['headers']  
 
+            subject = ''
+
             for values in email_data:
                 name = values['name']
                 if name == 'Subject':

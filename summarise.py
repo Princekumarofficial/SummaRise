@@ -14,11 +14,9 @@ def get_summary_list(n_summary=10):
     """
     mails = get_mails(n_summary)
 
-    summaries = []
-
     for mail in mails:
         response = model.generate_content(f"What is this mail trying to tell me in less than 50 words without showing order details or transaction details: \nFrom- {mail['From']} \nSubject- {mail['Subject']} \nBody- {mail['body']}")
-        summaries.append(response.text)
+        mail['summary'] = response.text
 
-    return summaries
+    return mails
 
