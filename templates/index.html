@@ -14,40 +14,36 @@
         <img src="{{url_for('static', filename='Firefly_20240327011332-removebg.png')}}" alt="">
     </div>
     </div>
-    <!-- <div class="input">
-        <form class="inp">
-            <input type="text" class="btn email" placeholder=" G-mail">
-            <input type="password" class="btn password" placeholder=" Password">
-            <i class="far fa-eye-slash" id="togglePassword"></i>
-        </form>
-        <button class="btn verify">Verify</button> -->
+
 <div class="options">
         <div class="swiper-wrapper">
 
             {% for s in all_s: %}
-
-            <div class="swiper-slide">
-                <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="Profile Picture">
-                <h3> {{s['From']}} </h3>
-                <h2> {{s['Subject']}} </h2>
-                <p> {{s['summary']}} </p>
-            </div>
-
+            <a href="{{url_for('home', mail=all_s.index(s)+1)}}">
+                <div class="swiper-slide">
+                    <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" alt="Profile Picture">
+                    <h3> {{s['From']}} </h3>
+                    <h4> {{s['Subject']}} </h4>
+                    <p> {{s['summary']}} </p>
+                </div>
+            </a>
             {% endfor %}
 
         </div>
     </div>
     </div>
-    <div class="summarize">
-    <button>
-        SUMMARIZE
-    </button>
-    </div>
+    
 </div>
 </div>
+
+{% if mail: %}
+
 <div class="output">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et asperiores, id magnam voluptate optio molestiae quos illo libero repellendus tenetur rem praesentium sequi! Deserunt quo nam commodi laudantium molestiae officia veniam, voluptate architecto eos quis autem culpa neque dicta, nemo eaque qui, illum quos tenetur ipsum vitae. Ad culpa nihil expedita quod autem! Voluptatum ipsam eum architecto sunt, ipsum error quisquam soluta fuga atque vitae, dignissimos dicta, adipisci aliquid dolores doloribus consequatur voluptates sint corrupti magni hic natus? Quia qui eveniet odio culpa magni laborum labore quidem blanditiis. Id beatae officiis dicta, odio excepturi recusandae nobis totam natus rerum?
+    {{all_s[mail-1]['body'] | safe }}
 </div>
+
+{% endif %}
+
 <script src="{{url_for('static', filename='script.js')}}"></script>
 </body>
 </html>
