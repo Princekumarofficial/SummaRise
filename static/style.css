@@ -1,0 +1,49 @@
+body{
+    padding: 4rem;
+    background-image: url('bg-img.jpg');
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.email-show{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex: 1 0 calc(20% - 4rem);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover{
+    backdrop-filter: blur(15px);
+    border: 2px solid #93BCCB;
+}
+
+a.nostyle {
+    text-decoration: none;
+    color: white;
+    cursor:pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .email-show{
+        flex-direction: column;
+    }
+    body{
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .card{
+        flex: 1 0 calc(33% - 4rem)
+    }
+    body{
+        padding: 2rem;
+    }
+}

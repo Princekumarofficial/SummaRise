@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request
 from summarise import get_summary_list
 
 app = Flask(__name__)
