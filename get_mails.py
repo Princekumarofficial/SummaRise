@@ -57,6 +57,8 @@ def get_mails(n_mails):
                 name = values['name']
                 if name == 'Subject':
                    subject = values['value']
+                elif name == 'Date':
+                   date = values['value']
                      
             for values in email_data:
                 name = values['name']
@@ -73,7 +75,8 @@ def get_mails(n_mails):
                                {
                                   'From': from_name,
                                   'Subject': subject,
-                                  'body': text
+                                  'body': text,
+                                  'date': date
                                }
                             )
 

@@ -11,16 +11,20 @@ body{
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
+    margin-bottom: 5rem;
 }
 
 .card{
     flex: 1 0 calc(20% - 4rem);
-    background-color: transparent;
+    background: rgba(5, 68, 94, 0.1);
     backdrop-filter: blur(5px);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
 }
 
 .card:hover{
     backdrop-filter: blur(15px);
+    background: rgba(5, 68, 94, 0.3);
     border: 2px solid #93BCCB;
 }
 
@@ -28,6 +32,15 @@ a.nostyle {
     text-decoration: none;
     color: white;
     cursor:pointer;
+}
+
+.email-full{
+    background-color: rgba(5, 68, 94, 0.3);
+    padding: 2rem;
+    border: 1px solid #93BCCB;
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 600px) {
