@@ -19,4 +19,3 @@ def get_summary_list(n_summary=10):
         mail['summary'] = response.text
 
     return mails
-
